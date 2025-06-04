@@ -1,7 +1,7 @@
 <!-- Portrait orientation only -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="#1A1A1A"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PcView" >
@@ -16,8 +16,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        >
+        android:layout_alignParentBottom="true">
 
         <RelativeLayout
             android:id="@+id/no_pc_found_layout"
@@ -48,43 +47,46 @@
 
     </RelativeLayout>
 
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/settingsButton"
         android:layout_width="70dp"
         android:layout_height="65dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/ic_settings"
-        android:preferKeepClear="true"
-        style="?android:attr/borderlessButtonStyle"/>
+        app:icon="@drawable/ic_settings"
+        app:iconTint="@color/colorOnPrimary"
+        app:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="16dp"
+        android:contentDescription="@string/settings"
+        style="@style/Widget.Material3.Button.Icon"/>
 
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/helpButton"
         android:layout_width="70dp"
         android:layout_height="65dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/settingsButton"
         android:layout_toEndOf="@+id/settingsButton"
-        android:src="@drawable/ic_help"
-        android:preferKeepClear="true"
-        style="?android:attr/borderlessButtonStyle"/>
+        app:icon="@drawable/ic_help"
+        app:iconTint="@color/colorOnPrimary"
+        app:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="16dp"
+        android:contentDescription="@string/help"
+        style="@style/Widget.Material3.Button.Icon"/>
     
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/manuallyAddPc"
         android:layout_width="70dp"
         android:layout_height="65dp"
-        android:cropToPadding="false"
-        android:scaleType="fitXY"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:src="@drawable/ic_add"
-        android:preferKeepClear="true"
-        style="?android:attr/borderlessButtonStyle"/>
+        app:icon="@drawable/ic_add"
+        app:iconTint="@color/colorOnPrimary"
+        app:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="16dp"
+        android:contentDescription="@string/title_add_pc"
+        style="@style/Widget.Material3.Button.Icon"/>
 
 </RelativeLayout>

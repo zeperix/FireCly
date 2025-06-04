@@ -1,60 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:background="@color/colorBackground">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_vibrator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClick"
-        android:text="@string/debug_info_test_device_vibration" />
+        android:text="@string/debug_info_test_device_vibration"
+        app:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="16dp"
+        android:textColor="@color/colorOnPrimary"
+        style="@style/Widget.Material3.Button"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_update_gamepad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClick"
-        android:text="@string/debug_info_refresh_gamepad_list" />
+        android:text="@string/debug_info_refresh_gamepad_list"
+        app:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="16dp"
+        android:textColor="@color/colorOnPrimary"
+        style="@style/Widget.Material3.Button"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/bt_vibrator_gamepad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClick"
-        android:text="@string/debug_info_test_gamepad_rumble" />
+        android:text="@string/debug_info_test_gamepad_rumble"
+        app:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="16dp"
+        android:textColor="@color/colorOnPrimary"
+        style="@style/Widget.Material3.Button"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/bt_vibrator_value"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:text="@string/debug_info_vibration_amplitude" />
+            android:text="@string/debug_info_vibration_amplitude"
+            app:backgroundTint="@color/colorPrimary"
+            app:cornerRadius="16dp"
+            android:textColor="@color/colorOnPrimary"
+            style="@style/Widget.Material3.Button"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/bt_vibrator_cancle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:text="@string/debug_info_stop_vibration" />
-
-
-
+            android:text="@string/debug_info_stop_vibration"
+            app:backgroundTint="@color/colorPrimary"
+            app:cornerRadius="16dp"
+            android:textColor="@color/colorOnPrimary"
+            style="@style/Widget.Material3.Button"/>
     </LinearLayout>
 
     <TextView
         android:id="@+id/tx_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/debug_info_refresh_gamepad_info" />
+        android:text="@string/debug_info_refresh_gamepad_info"
+        android:textColor="@color/colorOnSurface"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -64,9 +84,8 @@
         <TextView
             android:id="@+id/tx_game_pad_info"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorOnSurface"/>
     </ScrollView>
-
-
 
 </LinearLayout>
